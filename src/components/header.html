@@ -1,0 +1,84 @@
+<header class="bg-secondary-100 pb-4 lg:pb-0">
+  <!-- top header -->
+  <div class="border-secondary-200 border-b py-3 md:pb-6 md:pt-8">
+    <div class="container flex justify-center">
+      <a href="#" class="text-center text-base md:text-xl font-balsamiq">Cuddly Sheep</a>
+    </div>
+  </div>
+
+  <!-- main header -->
+  <div class="container flex flex-row-reverse items-center justify-between py-4 md:py-7 lg:flex-row">
+    <nav
+      id="header-nav"
+      class="max-lg:bg-primary-200 fixed left-0 z-[888] mt-12 md:mt-20 flex flex-col items-center gap-12 bg-light pt-24 transition-all duration-500 max-lg:top-0 max-lg:min-h-screen max-lg:w-[320px] max-lg:-translate-x-full max-lg:shadow-lg max-sm:w-full lg:static lg:mt-0 lg:gap-8 lg:p-0">
+      <ul class="flex flex-col items-center gap-8 lg:flex-row">
+        <li class="hover-stroke">
+          <a href="#about" class="text-secondary-100 lg:text-primary-200 text-xl lg:text-base">Про магазин</a>
+        </li>
+        <li class="hover-stroke">
+          <a href="#shop" class="text-secondary-100 lg:text-primary-200 text-xl lg:text-base">Каталог</a>
+        </li>
+        <li class="hover-stroke">
+          <a href="#sizes" class="text-secondary-100 lg:text-primary-200 text-xl lg:text-base">Розміри</a>
+        </li>
+        <li class="hover-stroke">
+          <a href="#reviews" class="text-secondary-100 lg:text-primary-200 text-xl lg:text-base">Відгуки</a>
+        </li>
+      </ul>
+      <div class="block lg:hidden">
+        <div class="flex items-center gap-3 mb-10">
+          <div class=" block h-1 w-12 border-b border-secondary-100"></div>
+          <svg class="fill-secondary-100 h-8 w-14">
+            <use href="./sprites/sprite.svg#icon-cloud"></use>
+          </svg>
+          <div class=" block h-1 w-12 border-b border-secondary-100"></div>
+        </div>
+        <a href="https://www.instagram.com/cuddly_sheep/" class="text-secondary-100 flex items-center gap-3 justify-center">
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
+            <path
+              fill="currentColor"
+              d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4H7.6m9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8A1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5a5 5 0 0 1-5 5a5 5 0 0 1-5-5a5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3a3 3 0 0 0 3 3a3 3 0 0 0 3-3a3 3 0 0 0-3-3Z" />
+          </svg>
+          <span class="font-medium text-lg ">cuddly_sheep</span>
+        </a>
+      </div>
+    </nav>
+    <div class="flex items-center gap-6">
+      <a href="#" class="flex items-center gap-2">
+        <svg class="text-primary-300 h-6 w-6">
+          <use href="./sprites/sprite.svg#icon-heart"></use>
+        </svg>
+        <span class="hidden lg:block">Улюблені</span>
+      </a>
+      <a href="#" class="flex items-center gap-2">
+        <svg class="text-primary-300 h-6 w-6 fill-none stroke-black stroke-[1.5]">
+          <use href="./sprites/sprite.svg#icon-profile"></use>
+        </svg>
+        <span class="hidden lg:block">Особистий кабінет</span>
+      </a>
+      <div class="flex items-center gap-2">
+        <a href="#" class="relative">
+          <span class="absolute -right-1.5 -top-1.5 grid h-4 w-4 place-content-center rounded-full bg-secondary pt-0.5 text-sm leading-none">1</span>
+          <svg class="text-primary-300 h-6 w-6">
+            <use href="./sprites/sprite.svg#icon-cart"></use>
+          </svg>
+        </a>
+        <span class="hidden lg:block">Кошик</span>
+      </div>
+    </div>
+    <button id="burger-button" class="group relative z-[999] block lg:hidden">
+      <div class="relative flex h-[50px] w-[40px] transform items-center justify-center overflow-hidden">
+        <div id="burger-inner" class="flex h-[20px] w-[25px] origin-center transform flex-col justify-between overflow-hidden transition-all duration-300">
+          <div class="h-[2px] w-7 origin-left transform rounded-2xl bg-primary-300 transition-all duration-300"></div>
+          <div class="h-[2px] w-7 transform rounded-2xl bg-primary-300 transition-all delay-75 duration-300"></div>
+          <div class="h-[2px] w-7 origin-left transform rounded-2xl bg-primary-300 transition-all delay-150 duration-300"></div>
+
+          <div id="burger-cross" class="absolute top-2.5 flex w-0 -translate-x-10 transform items-center justify-between transition-all duration-500">
+            <div class="absolute h-[2px] w-7 rotate-0 transform rounded-2xl bg-secondary-100 transition-all delay-300 duration-500"></div>
+            <div class="absolute h-[2px] w-7 -rotate-0 transform rounded-2xl bg-secondary-100 transition-all delay-300 duration-500"></div>
+          </div>
+        </div>
+      </div>
+    </button>
+  </div>
+</header>

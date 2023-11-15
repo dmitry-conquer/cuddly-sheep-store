@@ -1,0 +1,44 @@
+/* Import lib styles  */
+// @import '../../node_modules/swiper/swiper.scss';
+// @import '../../node_modules/swiper/modules/navigation/navigation.scss';
+// @import '../../node_modules/swiper/modules/autoplay/autoplay.scss';
+// @import '../../node_modules/swiper/modules/pagination/pagination.scss';
+// @import '../../node_modules/swiper/modules/scrollbar/scrollbar.scss';
+// @import '../../node_modules/nouislider/dist/nouislider.min';
+// @import '../../node_modules/aos/src/sass/aos.scss';
+
+@import "fonts";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-montserrat text-primary-200;
+  }
+}
+
+@layer components {
+  #burger-inner {
+    &.active-burger {
+      @apply [&>*:nth-child(-n+3)]:translate-x-10;
+    }
+  }
+  #burger-cross {
+    &.active-burger {
+      @apply w-12 translate-x-0  [&>*:nth-child(1)]:rotate-45 [&>*:nth-child(2)]:-rotate-45;
+    }
+  }
+  #header-nav {
+    &.active-menu {
+      @apply max-lg:translate-x-0;
+    }
+  }
+}
+
+@layer utilities {
+  .light-shadow {
+    box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.04);
+  }
+}
