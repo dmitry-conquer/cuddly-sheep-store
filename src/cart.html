@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="uk">
+  @@include('components/head.html', { 'title': 'Cart' })
+  <body>
+    <div class="relative flex min-h-screen flex-col overflow-hidden">
+      @@include('components/header.html', { })
+      <main class="grow">
+        <section class="container py-10 md:py-16">
+          <h1 class="mb-12 font-balsamiq text-6xl">Кошик</h1>
+          <div class="grid w-full grid-cols-1 gap-16 lg:grid-cols-[auto_22rem]">
+            <div class="w-full">
+              <table class="w-full">
+                <tbody class="divide-y border-y">
+                  <tr class="flex w-full items-center justify-center max-sm:flex-wrap sm:justify-between">
+                    <td class="hidden shrink-0 p-4 xl:block">
+                      <img src="./img/products/5/1.webp" alt="product" class="h-28 w-32 shrink-0 object-cover" />
+                    </td>
+                    <td class="w-full p-4 text-center max-sm:pb-0 sm:max-w-sm sm:text-left">Сірий плюшевий плед Alize Puffy (Ромби)</td>
+                    <td class="p-4">
+                      <div class="flex items-center justify-center rounded-lg border border-primary-200 p-2">
+                        <button class="text-2xl leading-none" type="button">-</button>
+                        <input type="number" class="w-12 text-center focus:outline-none" value="1" />
+                        <button class="text-2xl leading-none" type="button">+</button>
+                      </div>
+                    </td>
+                    <td class="whitespace-nowrap p-4 text-center text-xl font-semibold">1 299 ₴</td>
+                    <td class="p-4">
+                      <a href="#">
+                        <svg class="h-6 w-6 fill-primary-200">
+                          <use href="./sprites/sprite.svg#icon-trash"></use>
+                        </svg>
+                      </a>
+                    </td>
+                  </tr>
+                  <tr class="flex w-full items-center justify-center max-sm:flex-wrap sm:justify-between">
+                    <td class="hidden shrink-0 p-4 xl:block">
+                      <img src="./img/products/3/2.webp" alt="product" class="h-28 w-32 shrink-0 object-cover" />
+                    </td>
+                    <td class="w-full p-4 text-center max-sm:pb-0 sm:max-w-sm sm:text-left">Бежевий плюшевий плед Alize Puffy (Плетінка)</td>
+                    <td class="p-4">
+                      <div class="flex items-center justify-center rounded-lg border border-primary-200 p-2">
+                        <button class="text-2xl leading-none" type="button">-</button>
+                        <input type="number" class="w-12 text-center focus:outline-none" value="2" />
+                        <button class="text-2xl leading-none" type="button">+</button>
+                      </div>
+                    </td>
+                    <td class="whitespace-nowrap p-4 text-center text-xl font-semibold">3 476 ₴</td>
+                    <td class="p-4">
+                      <a href="#">
+                        <svg class="h-6 w-6 fill-primary-200">
+                          <use href="./sprites/sprite.svg#icon-trash"></use>
+                        </svg>
+                      </a>
+                    </td>
+                  </tr>
+                  <tr class="flex w-full items-center justify-center max-sm:flex-wrap sm:justify-between">
+                    <td class="hidden shrink-0 p-4 xl:block">
+                      <img src="./img/products/1/1.webp" alt="product" class="h-28 w-32 shrink-0 object-cover" />
+                    </td>
+                    <td class="w-full p-4 text-center max-sm:pb-0 sm:max-w-sm sm:text-left">Зелений плюшевий плед Alize Puffy (Плетінка)</td>
+                    <td class="p-4">
+                      <div class="flex items-center justify-center rounded-lg border border-primary-200 p-2">
+                        <button class="text-2xl leading-none" type="button">-</button>
+                        <input type="number" class="w-12 text-center focus:outline-none" value="1" />
+                        <button class="text-2xl leading-none" type="button">+</button>
+                      </div>
+                    </td>
+                    <td class="whitespace-nowrap p-4 text-center text-xl font-semibold">2 399 ₴</td>
+                    <td class="p-4">
+                      <a href="#">
+                        <svg class="h-6 w-6 fill-primary-200">
+                          <use href="./sprites/sprite.svg#icon-trash"></use>
+                        </svg>
+                      </a>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="divide-y rounded-xl border p-8">
+              <!-- delivery -->
+              <div class="py-4">
+                <div class="mb-3 flex items-center gap-3">
+                  <svg class="h-6 w-6 fill-primary-200/80">
+                    <use href="./sprites/sprite.svg#icon-truck"></use>
+                  </svg>
+                  <h2 class="font-balsamiq text-xl">Спосіб доставки</h2>
+                </div>
+                <div class="space-y-2">
+                  <label
+                    class="flex cursor-pointer items-center gap-4 rounded-lg border border-primary px-4 py-2 [&:has(input:checked)]:border-primary-200 [&:has(input:checked)]:bg-primary-200 [&:has(input:checked)]:text-white">
+                    <input type="radio" name="delivery" value="nova" class="sr-only" checked />
+                    <img src="./img/nova.webp" alt="Нова Пошта" class="h-6 w-6 object-contain" />
+                    <span>Нова Пошта</span>
+                  </label>
+                  <label
+                    class="flex cursor-pointer items-center gap-4 rounded-lg border border-primary px-4 py-2 [&:has(input:checked)]:border-primary-200 [&:has(input:checked)]:bg-primary-200 [&:has(input:checked)]:text-white">
+                    <input type="radio" name="delivery" value="nova" class="sr-only" />
+                    <img src="./img/ukrposhta.webp" alt="Укрпошта" class="h-6 w-6 object-contain" />
+                    <span>Укрпошта</span>
+                  </label>
+                </div>
+              </div>
+
+              <div class="py-4">
+                <!-- promo -->
+                <div class="mb-4 flex">
+                  <input type="text" value="winter-2024" class="w-full rounded-l-2xl border border-primary px-3 py-3 focus:outline-none" placeholder="Промокод" />
+                  <a href="#" class="whitespace-nowrap rounded-r-2xl bg-primary-200 px-3 py-3 font-medium text-white transition-colors duration-200 hover:bg-secondary-300 max-lg:mx-auto"
+                    >Застосувати</a
+                  >
+                </div>
+                <!-- amount -->
+                <div class="flex justify-between gap-4">
+                  <div class="text-xl">Кількість (<span>3</span>)</div>
+                  <span class="text-xl">4 299 ₴</span>
+                </div>
+              </div>
+
+              <div class="py-4">
+                <!-- sale -->
+                <div class="mb-2 flex justify-between gap-4">
+                  <div class="text-xl">Знижка</div>
+                  <span class="text-xl">-120 ₴</span>
+                </div>
+                <!-- total -->
+                <div class="mb-4 flex justify-between gap-4">
+                  <div class="text-2xl">Всього</div>
+                  <span class="text-2xl font-semibold">4 179 ₴</span>
+                </div>
+                <!-- checkout -->
+                <a href="" class="block rounded-2xl bg-primary-200 px-6 py-3 text-center font-medium text-white transition-colors duration-200 hover:bg-secondary-300 max-lg:mx-auto">
+                  Оформити замовлення
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- similar -->
+          <section class="py-10 md:py-16">
+            <div class="pl-4 sm:container sm:pl-0">
+              <h2 class="mb-4 text-center font-balsamiq text-4xl sm:mb-8 sm:text-5xl">Схожі товари</h2>
+              <div class="slider-products !-m-2 w-full overflow-hidden !p-2">
+                <div class="slider-products-wrapper flex w-full">
+                  <div class="slider-products-slide flex shrink-0 flex-col items-center rounded-lg px-4 py-5 shadow-md">
+                    <a href="" class="block h-full w-full overflow-hidden"><img src="./img/products/9/1.webp" alt="product 1" class="mb-6 h-60 w-full rounded-lg object-cover" /></a>
+                    <h2 class="mb-2 font-balsamiq text-xl">Плед бежевей, плетінка</h2>
+                    <p class="mb-4 text-xl font-semibold">1799 ₴</p>
+                    <a href="" class="mb-4 block rounded-2xl bg-primary-200 px-6 py-3 font-medium text-white transition-colors duration-200 hover:bg-secondary-300 max-lg:mx-auto">В кошик</a>
+                    <a href="#" class="transition-colors hover:text-secondary-300">Придбати в один клік</a>
+                  </div>
+                  <div class="slider-products-slide flex shrink-0 flex-col items-center rounded-lg px-4 py-5 shadow-md">
+                    <a href="" class="block h-full w-full overflow-hidden"><img src="./img/products/3/3.webp" alt="product 1" class="mb-6 h-60 w-full rounded-lg object-cover" /></a>
+                    <h2 class="mb-2 font-balsamiq text-xl">Плед бежевей, плетінка</h2>
+                    <p class="mb-4 text-xl font-semibold">1799 ₴</p>
+                    <a href="" class="mb-4 block rounded-2xl bg-primary-200 px-6 py-3 font-medium text-white transition-colors duration-200 hover:bg-secondary-300 max-lg:mx-auto">В кошик</a>
+                    <a href="#" class="transition-colors hover:text-secondary-300">Придбати в один клік</a>
+                  </div>
+                  <div class="slider-products-slide flex shrink-0 flex-col items-center rounded-lg px-4 py-5 shadow-md">
+                    <a href="" class="block h-full w-full overflow-hidden"><img src="./img/products/6/1.webp" alt="product 1" class="mb-6 h-60 w-full rounded-lg object-cover" /></a>
+                    <h2 class="mb-2 font-balsamiq text-xl">Плед бежевей, плетінка</h2>
+                    <p class="mb-4 text-xl font-semibold">1799 ₴</p>
+                    <a href="" class="mb-4 block rounded-2xl bg-primary-200 px-6 py-3 font-medium text-white transition-colors duration-200 hover:bg-secondary-300 max-lg:mx-auto">В кошик</a>
+                    <a href="#" class="transition-colors hover:text-secondary-300">Придбати в один клік</a>
+                  </div>
+                  <div class="slider-products-slide flex shrink-0 flex-col items-center rounded-lg px-4 py-5 shadow-md">
+                    <a href="" class="block h-full w-full overflow-hidden"><img src="./img/products/5/2.webp" alt="product 1" class="mb-6 h-60 w-full rounded-lg object-cover" /></a>
+                    <h2 class="mb-2 font-balsamiq text-xl">Плед бежевей, плетінка</h2>
+                    <p class="mb-4 text-xl font-semibold">1799 ₴</p>
+                    <a href="" class="mb-4 block rounded-2xl bg-primary-200 px-6 py-3 font-medium text-white transition-colors duration-200 hover:bg-secondary-300 max-lg:mx-auto">В кошик</a>
+                    <a href="#" class="transition-colors hover:text-secondary-300">Придбати в один клік</a>
+                  </div>
+                </div>
+                <div class="mt-10 hidden justify-center gap-6 sm:flex">
+                  <button class="prev-slide" type="button" aria-label="Попередній товар">
+                    <svg class="h-9 w-9 fill-primary-200 transition-colors hover:fill-secondary-300">
+                      <use href="./sprites/sprite.svg#icon-arrow-in-circle"></use>
+                    </svg>
+                  </button>
+                  <button class="next-slide" type="button" aria-label="Наступний товар">
+                    <svg class="h-9 w-9 rotate-180 fill-primary-200 transition-colors hover:fill-secondary-300">
+                      <use href="./sprites/sprite.svg#icon-arrow-in-circle"></use>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </section>
+        </section>
+      </main>
+      @@include('components/footer.html', { })
+    </div>
+    <script type="module" crossorigin src="./js/app.min.js"></script>
+  </body>
+</html>
