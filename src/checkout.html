@@ -6,8 +6,8 @@
       @@include('components/header.html', { })
       <main class="grow">
         <section class="container py-6 md:py-14">
-          <h1 class="sm:mb-6 font-balsamiq text-4xl sm:text-5xl">Оформлення замовлення</h1>
-          <div class="grid grid-cols-2 gap-20">
+          <h1 class="font-balsamiq text-4xl sm:mb-6 sm:text-5xl">Оформлення замовлення</h1>
+          <div class="grid grid-cols-2 items-start gap-20">
             <div>
               <div class="mb-12">
                 <h2 class="mb-4 font-balsamiq text-2xl">Контактна інформація</h2>
@@ -41,7 +41,7 @@
                     </label>
                   </div>
                   <div class="col-span-2">
-                    <div class="flex flex-col gap-2 mb-4">
+                    <div class="mb-4 flex flex-col gap-2">
                       <label for="post-index">Індекс відділення</label>
                       <input id="post-index" type="text" class="rounded-xl border border-primary px-4 py-3 focus:border-primary-200 focus:outline-none" placeholder="Поштовий індекс отримувача" />
                     </div>
@@ -59,7 +59,35 @@
             </div>
 
             <div>
-              <h2 class="mb-4 font-balsamiq text-2xl">Деталі замовлення</h2>
+              <h2 class="mb-4 font-balsamiq text-2xl">Підсумок замовлення</h2>
+              <ul class="space-y-2 rounded-t-xl rounded-bl-xl border border-primary p-6">
+                <li class="flex justify-between gap-4">
+                  <div class="text-lg">Сірий Alize Puffy плюшевий плед Alize Puffy (Ромби)</div>
+                  <div class="whitespace-nowrap text-lg font-semibold">к-сть <span>3</span></div>
+                  <div class="whitespace-nowrap text-lg font-semibold">1 299 ₴</div>
+                </li>
+                <li class="flex justify-between gap-4">
+                  <div class="text-lg">Сірий Alize Puffy плюшевий плед Alize Puffy (Ромби)</div>
+                  <div class="whitespace-nowrap text-lg font-semibold">к-сть <span>3</span></div>
+                  <div class="whitespace-nowrap text-lg font-semibold">1 299 ₴</div>
+                </li>
+                <li class="flex justify-between gap-4">
+                  <div class="text-lg">Сірий Alize Puffy плюшевий плед Alize Puffy (Ромби)</div>
+                  <div class="whitespace-nowrap text-lg font-semibold">к-сть <span>3</span></div>
+                  <div class="whitespace-nowrap text-lg font-semibold">1 299 ₴</div>
+                </li>
+                <li class="flex justify-between gap-4">
+                  <div class="text-lg">Сірий Alize Puffy плюшевий плед Alize Puffy (Ромби)</div>
+                  <div class="whitespace-nowrap text-lg font-semibold">к-сть <span>3</span></div>
+                  <div class="whitespace-nowrap text-lg font-semibold">1 299 ₴</div>
+                </li>
+              </ul>
+              <div class="flex justify-end ">
+                <div class="mb-4 flex text-primary-100 bg-primary-200 ml-auto gap-4 py-3 px-4 border-x border-b rounded-bl-xl rounded-br-xl border-primary-200">
+                  <div class="text-xl">Всього</div>
+                  <span class="text-xl font-semibold">4 179 ₴</span>
+                </div>
+              </div>
             </div>
           </div>
         </section>
