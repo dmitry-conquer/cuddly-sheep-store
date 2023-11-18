@@ -11,10 +11,8 @@
     <nav
       id="header-nav"
       class="max-lg:bg-primary-200 fixed left-0 z-[888] mt-12 md:mt-20 flex flex-col items-center gap-12 bg-light pt-24 transition-all duration-500 max-lg:top-0 max-lg:min-h-screen max-lg:w-[320px] max-lg:-translate-x-full max-lg:shadow-lg max-sm:w-full lg:static lg:mt-0 lg:gap-8 lg:p-0">
-      <ul class="flex flex-col items-center gap-8 lg:flex-row">
-        <li class="hover-stroke">
-          <a href="/" class="text-secondary-100 lg:text-primary-200 text-xl lg:text-base hover:text-secondary-300 transition-colors">Головна</a>
-        </li>
+      <ul class="flex flex-col flex-wrap items-center gap-8 lg:flex-row">
+   
         <li class="hover-stroke">
           <a href="#about" class="text-secondary-100 lg:text-primary-200 text-xl lg:text-base hover:text-secondary-300 transition-colors">Про магазин</a>
         </li>
@@ -26,6 +24,9 @@
         </li>
         <li class="hover-stroke">
           <a href="#reviews" class="text-secondary-100 lg:text-primary-200 text-xl lg:text-base hover:text-secondary-300 transition-colors">Відгуки</a>
+        </li>
+        <li class="hover-stroke">
+          <a href="contacts.html" class="text-secondary-100 lg:text-primary-200 text-xl lg:text-base hover:text-secondary-300 transition-colors">Контакти</a>
         </li>
       </ul>
       <div class="block lg:hidden">
@@ -48,25 +49,25 @@
     </nav>
     <div class="flex items-center gap-6">
       <a href="#" class="flex items-center group gap-2">
-        <svg class=" h-6 w-6">
+        <svg class=" h-6 w-6 fill-primary-300">
           <use href="./sprites/sprite.svg#icon-heart"></use>
         </svg>
-        <span class="hidden lg:block group-hover:text-secondary-300 transition-colors">Улюблені</span>
+        <span class="hidden xl:block group-hover:text-secondary-300 transition-colors">Улюблені</span>
       </a>
       <a href="#" class="flex items-center group gap-2">
-        <svg class=" h-6 w-6 fill-none stroke-black stroke-[1.5]">
+        <svg class=" h-6 w-6 fill-none stroke-primary-300 stroke-[1.5]">
           <use href="./sprites/sprite.svg#icon-profile"></use>
         </svg>
-        <span class="hidden lg:block group-hover:text-secondary-300 transition-colors">Особистий кабінет</span>
+        <span class="hidden xl:block group-hover:text-secondary-300 transition-colors">Особистий кабінет</span>
       </a>
       <a href="cart.html" class="flex items-center group gap-2">
         <div href="#" class="relative">
           <span class="absolute -right-1.5 -top-1.5 grid h-4 w-4 place-content-center rounded-full bg-secondary pt-0.5 text-sm leading-none">1</span>
-          <svg class=" h-6 w-6">
+          <svg class=" h-6 w-6 fill-primary-300">
             <use href="./sprites/sprite.svg#icon-cart"></use>
           </svg>
         </div>
-        <span class="hidden lg:block group-hover:text-secondary-300 transition-colors">Кошик</span>
+        <span class="hidden xl:block group-hover:text-secondary-300 transition-colors">Кошик</span>
       </a>
     </div>
     <button id="burger-button" class="group relative z-[999] block lg:hidden">

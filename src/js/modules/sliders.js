@@ -1,4 +1,4 @@
-import Swiper, { Navigation, Autoplay } from "swiper";
+import Swiper, { Navigation, Autoplay, FreeMode } from "swiper";
 
 export function useSliders() {
   const productsSliders = document.querySelectorAll(".slider-products");
@@ -51,4 +51,35 @@ export function useSliders() {
       });
     }
   });
+
+  // slider-single-gallery
+
+  const sliderSingleGallery = document.querySelector(".slider-single-gallery");
+  if (sliderSingleGallery) {
+    new Swiper(sliderSingleGallery, {
+      modules: [Navigation, FreeMode],
+      wrapperClass: "slider-single-gallery-wrapper",
+      slideClass: "slider-single-gallery-slide",
+      freeMode: true,
+      slidesPerView: 5,
+      spaceBetween: 10,
+      speed: 800,
+
+      navigation: {
+        prevEl: ".single-prev-slide",
+        nextEl: ".single-next-slide",
+      },
+
+      breakpoints: {
+        320: {
+          slidesPerView: 3,
+          spaceBetween: 10,
+        },
+        500: {
+          slidesPerView: 4,
+          spaceBetween: 10,
+        },
+      },
+    });
+  }
 }

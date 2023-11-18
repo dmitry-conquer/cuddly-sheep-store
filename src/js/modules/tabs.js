@@ -1,28 +1,24 @@
-export function initTabs() {
-   document.addEventListener('click', (e) => {
-      const target = e.target.closest('[data-tab-caption]');
-      if (!target) return
-      const captionId = target.dataset.tabCaption;
-      const tabParent = target.closest('._tab');
-      const contentItem = tabParent.querySelector(`[data-tab-content='${captionId}']`);
-      if (!contentItem) return;
-      const captions = tabParent.querySelectorAll('[data-tab-caption]');
-      captions.forEach(caption => caption.classList.remove('_active-tab-caption'));
+export function useTabs() {
+  const tabs = document.querySelectorAll(".tab");
 
-      const contents = tabParent.querySelectorAll('[data-tab-content]');
-      contents.forEach(content => content.classList.remove('_active-tab-content'));
+  tabs.forEach(tab => {
+    if (tab) {
+      tab.addEventListener("click", e => {
+        const target = e.target.closest("[data-tab-caption]");
+        if (!target) return;
+        const captionId = target.dataset.tabCaption;
+        const content = tab.querySelector(`[data-tab-content='${captionId}']`);
+        if (!content) return;
 
-      target.classList.add('_active-tab-caption');
-      contentItem.classList.add('_active-tab-content');
+        const captions = tab.querySelectorAll("[data-tab-caption]");
+        captions.forEach(caption => caption.classList.remove("active-tab-caption"));
 
-      contentItem.querySelectorAll('._animated').forEach((item, i) => {
-         if (!item.classList.contains('_tab-content-anim')) {
-            item.style.setProperty('--i', `${i}`);
-            item.classList.add('_tab-content-anim');
-            setTimeout(() => {
-               item.classList.remove('_tab-content-anim');
-            }, 1200);
-         }
+        const contents = tab.querySelectorAll("[data-tab-content]");
+        contents.forEach(content => content.classList.remove("active-tab-content"));
+
+        target.classList.add("active-tab-caption");
+        content.classList.add("active-tab-content");
       });
-   });
+    }
+  });
 }

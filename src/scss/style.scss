@@ -3,6 +3,7 @@
 // @import '../../node_modules/swiper/modules/navigation/navigation.scss';
 // @import '../../node_modules/swiper/modules/autoplay/autoplay.scss';
 // @import '../../node_modules/swiper/modules/pagination/pagination.scss';
+@import '../../node_modules/swiper/modules/free-mode/free-mode.scss';
 // @import '../../node_modules/swiper/modules/scrollbar/scrollbar.scss';
 // @import '../../node_modules/nouislider/dist/nouislider.min';
 // @import '../../node_modules/aos/src/sass/aos.scss';
@@ -45,6 +46,31 @@
   #header-nav {
     &.active-menu {
       @apply max-lg:translate-x-0;
+    }
+  }
+
+  /*
+    slider
+  */
+
+  .swiper-button-disabled {
+    @apply opacity-40;
+  }
+
+  /*
+    tabs
+  */
+
+  [data-tab-caption] {
+    &.active-tab-caption {
+      @apply border-b-2 border-primary;
+    }
+  }
+
+  [data-tab-content] {
+    @apply hidden;
+    &.active-tab-content {
+      @apply block;
     }
   }
 }
