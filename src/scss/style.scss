@@ -3,7 +3,7 @@
 // @import '../../node_modules/swiper/modules/navigation/navigation.scss';
 // @import '../../node_modules/swiper/modules/autoplay/autoplay.scss';
 // @import '../../node_modules/swiper/modules/pagination/pagination.scss';
-@import '../../node_modules/swiper/modules/free-mode/free-mode.scss';
+@import "../../node_modules/swiper/modules/free-mode/free-mode.scss";
 // @import '../../node_modules/swiper/modules/scrollbar/scrollbar.scss';
 // @import '../../node_modules/nouislider/dist/nouislider.min';
 // @import '../../node_modules/aos/src/sass/aos.scss';
@@ -15,8 +15,9 @@
 @tailwind utilities;
 
 @layer base {
+  
   body {
-    @apply font-montserrat text-primary-200;
+    @apply font-montserrat text-primary-200 ;
   }
 
   /* Chrome, Safari, Edge, Opera */
@@ -71,6 +72,16 @@
     @apply hidden;
     &.active-tab-content {
       @apply block;
+    }
+  }
+
+  /*
+    modals
+  */
+
+  .modal {
+    &.is-open {
+      @apply opacity-100 visible;
     }
   }
 }

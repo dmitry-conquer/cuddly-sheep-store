@@ -81,4 +81,57 @@ export function useSliders() {
       },
     });
   }
+
+  /*
+      slider-reviews
+  */
+  const sliderReviews = document.querySelector(".slider-reviews");
+
+  if (sliderReviews) {
+    new Swiper(sliderReviews, {
+      modules: [Navigation, Autoplay],
+
+      wrapperClass: "slider-reviews-wrapper",
+      slideClass: "slider-reviews-slide",
+
+      slidesPerView: 4,
+      spaceBetween: 30,
+      speed: 800,
+      loop: true,
+
+      autoplay: {
+        delay: 3200,
+        disableOnInteraction: false,
+        pauseOnMouseEnter: true,
+      },
+
+      navigation: {
+        prevEl: sliderReviews.querySelector(".prev-slide"),
+        nextEl: sliderReviews.querySelector(".next-slide"),
+      },
+
+      breakpoints: {
+        320: {
+          slidesPerView: 1.3,
+          spaceBetween: 20,
+        },
+        640: {
+          slidesPerView: 2,
+          spaceBetween: 30,
+        },
+        768: {
+          slidesPerView: 2.4,
+          spaceBetween: 30,
+        },
+        1024: {
+          slidesPerView: 3,
+          spaceBetween: 30,
+        },
+        1280: {
+          slidesPerView: 4,
+          spaceBetween: 30,
+        },
+      },
+    });
+  }
 }
