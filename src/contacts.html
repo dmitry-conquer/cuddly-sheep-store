@@ -5,44 +5,35 @@
     <div class="relative flex min-h-screen flex-col overflow-hidden">
       @@include('components/header.html', { })
       <main class="grow">
-        <section class="container py-6 md:py-14">
+        <section class="max-w-6xl mx-auto px-4 py-6 md:py-14">
           <h1 class="mb-10 font-balsamiq text-4xl sm:text-5xl">Контакти</h1>
-          <div class="grid grid-cols-1 md:grid-cols-[40%_60%] lg:gap-20">
-            <address class="order-2 space-y-6 not-italic md:order-1">
-              <hr class="my-10 block border-t md:hidden" />
+          <div class="grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-12 lg:gap-20">
+            <address class="space-y-6 not-italic ">
               <div>
                 <h2 class="mb-1 font-balsamiq text-2xl">Телефон</h2>
-                <a href="mailto:cuddlysheep.store@gmail.com">+38 066 316-93-94</a>
+                <a href="mailto:cuddlysheep.store@gmail.com" class="transition-colors hover:text-secondary-300">+38 066 316-93-94</a>
               </div>
 
               <div>
                 <h2 class="mb-1 font-balsamiq text-2xl">Електронна адреса</h2>
-                <a href="mailto:cuddlysheep.store@gmail.com">cuddlysheep.store@gmail.com</a>
+                <a href="mailto:cuddlysheep.store@gmail.com" class="flex items-center gap-2">
+                  <span class="transition-colors hover:text-secondary-300">cuddlysheep.store@gmail.com</span>
+                </a>
               </div>
 
               <div>
-                <h2 class="mb-1 font-balsamiq text-2xl">Соціальні мережі</h2>
-                <ul class="flex gap-2">
-                  <li>
-                    <a href="">
-                      <svg class="h-7 w-7 fill-primary-200">
-                        <use href="./sprites/sprite.svg#icon-insta"></use>
-                      </svg>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="" class="">
-                      <svg class="h-7 w-7 fill-primary-200">
-                        <use href="./sprites/sprite.svg#icon-telegram"></use>
-                      </svg>
-                    </a>
-                  </li>
-                </ul>
+                <h2 class="mb-1 font-balsamiq text-2xl">Інстаграм</h2>
+                <a href="#" target="_blank" class="group flex items-center gap-2">
+                  <svg class="h-7 w-7 shrink-0 fill-primary-200 transition-colors group-hover:fill-secondary-300">
+                    <use href="./sprites/sprite.svg#icon-insta"></use>
+                  </svg>
+                  <span class="transition-colors group-hover:text-secondary-300">cuddly_sheep</span>
+                </a>
               </div>
             </address>
 
-            <div id="form-feedback" class="order-1 md:order-2">
-              <h2 class="mb-5 font-balsamiq text-xl">Напишіть нам, і ми відповімо на всі Ваші запитання.</h2>
+            <div id="form-feedback" >
+              <h2 class="mb-5 font-balsamiq text-xl">Напишіть нам, і ми відповімо на всі Ваші запитання</h2>
               <form action="#">
                 <div class="mb-8 grid grid-cols-1 gap-4 sm:grid-cols-2">
                   <input type="text" class="w-full rounded-xl border border-primary px-4 py-3 focus:border-primary-200 focus:outline-none" placeholder="Ім'я" />

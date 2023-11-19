@@ -2,12 +2,12 @@
   <!-- top header -->
   <div class="border-b border-secondary-200 py-3 md:pb-6 md:pt-8">
     <div class="container flex justify-center">
-      <a href="/" class="text-center font-balsamiq text-base md:text-xl">Cuddly Sheep</a>
+      <a href="/" class="text-center font-balsamiq text-base md:text-xl hover:text-secondary-300 transition-colors">Cuddly Sheep</a>
     </div>
   </div>
 
   <!-- main header -->
-  <div class="container relative flex flex-row-reverse items-center justify-between py-4 md:py-7 lg:flex-row">
+  <div class="container relative flex flex-row-reverse items-center justify-between py-4 lg:py-7 lg:flex-row">
     <nav
       id="header-nav"
       class="bg-light fixed left-0 z-[888] mt-12 flex flex-col items-center gap-12 pt-24 transition-all duration-500 max-lg:top-0 max-lg:min-h-screen max-lg:w-[320px] max-lg:-translate-x-full max-lg:bg-primary-200 max-lg:shadow-lg max-sm:w-full md:mt-20 lg:static lg:mt-0 lg:gap-8 lg:p-0">
@@ -47,13 +47,7 @@
       </div>
     </nav>
     <div class="flex items-center gap-6">
-      <a href="#" class="group flex items-center gap-2">
-        <svg class="h-6 w-6 fill-none stroke-primary-200 transition-colors group-hover:stroke-secondary-300">
-          <use href="./sprites/sprite.svg#icon-heart"></use>
-        </svg>
-        <span class="hidden transition-colors group-hover:text-secondary-300 xl:block">Улюблені</span>
-      </a>
-      <div class="group/profparent z-[9999] sm:relative cursor-pointer">
+      <div class="group/profparent sm:relative cursor-pointer">
         <div class="group flex items-center gap-2">
           <svg class="h-6 w-6 fill-none stroke-primary-300 group-hover:stroke-secondary-300 stroke-[1.5]">
             <use href="./sprites/sprite.svg#icon-profile"></use>
@@ -62,10 +56,10 @@
         </div>
 
         <div
-          class="invisible absolute right-0 top-[80%] z-[999] w-full translate-y-2 rounded-xl bg-white px-6 pb-6 pt-8 opacity-0 shadow-md transition-all group-hover/profparent:visible group-hover/profparent:translate-y-0 group-hover/profparent:opacity-100 sm:right-0 sm:top-[calc(100%+3px)] sm:w-[320px]">
+          class="invisible absolute right-10 sm:right-0 top-[80%] z-[999]  translate-y-2 rounded-xl bg-white px-6 pb-6 pt-8 opacity-0 shadow-lg transition-all group-hover/profparent:visible group-hover/profparent:translate-y-0 group-hover/profparent:opacity-100 sm:top-[calc(100%+5px)] w-[280px]">
           <!-- is-logined -->
           <div>
-            <div class="mb-4 flex flex-col">
+            <div class="mb-6 flex flex-col">
               <span class="font-balsamiq">Dmitry Conquer</span>
               <span class="text-sm">dmitry.conquer@gmail.com</span>
             </div>
