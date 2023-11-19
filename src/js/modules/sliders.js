@@ -53,7 +53,6 @@ export function useSliders() {
   });
 
   // slider-single-gallery
-
   const sliderSingleGallery = document.querySelector(".slider-single-gallery");
   if (sliderSingleGallery) {
     new Swiper(sliderSingleGallery, {

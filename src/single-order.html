@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="uk">
+  @@include('components/head.html', { 'title': 'Особистий кабінет' })
+  <body>
+    <div class="relative flex min-h-screen flex-col overflow-hidden">
+      @@include('components/header.html', { })
+      <main class="grow">
+        <section class="mx-auto grid max-w-7xl grid-cols-1 md:grid-cols-2 gap-10 px-4 py-6 md:py-10">
+          <div class="order-2 md:order-1 relative mx-auto max-w-full md:max-w-lg border-x border-b pt-10">
+            <span class="absolute left-0 top-0 h-2.5 w-full rounded-lg bg-secondary"></span>
+            <div class="relative mb-3 flex justify-center border-b px-3">
+              <div class="absolute left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white px-3 font-balsamiq text-lg text-primary-200/80">Cuddly Sheep</div>
+            </div>
+            <div class="divide-y px-6 py-4">
+              <div class="flex flex-wrap justify-between gap-x-4 gap-y-1 py-4 text-lg font-medium uppercase">
+                <h2>НОМЕР ЗАМОВЛЕННЯ</h2>
+                <span class="font-semibold">№423742</span>
+              </div>
+              <ul class="space-y-2 divide-y rounded-t-xl rounded-bl-xl py-4">
+                <li class="flex justify-start gap-x-4 gap-y-1 py-2 max-sm:flex-wrap sm:justify-between">
+                  <div class="w-full text-sm">Сірий Alize Puffy плюшевий плед Alize Puffy (Ромби)</div>
+                  <div class="whitespace-nowrap text-sm font-semibold">к-сть <span>3</span></div>
+                  <div class="whitespace-nowrap text-sm font-semibold">1 299 ₴</div>
+                </li>
+                <li class="flex justify-start gap-x-4 gap-y-1 py-2 max-sm:flex-wrap sm:justify-between">
+                  <div class="w-full text-sm">Сірий Alize Puffy плюшевий плед Alize Puffy (Ромби)</div>
+                  <div class="whitespace-nowrap text-sm font-semibold">к-сть <span>3</span></div>
+                  <div class="whitespace-nowrap text-sm font-semibold">1 299 ₴</div>
+                </li>
+                <li class="flex justify-start gap-x-4 gap-y-1 py-2 max-sm:flex-wrap sm:justify-between">
+                  <div class="w-full text-sm">Сірий Alize Puffy плюшевий плед Alize Puffy (Ромби)</div>
+                  <div class="whitespace-nowrap text-sm font-semibold">к-сть <span>3</span></div>
+                  <div class="whitespace-nowrap text-sm font-semibold">1 299 ₴</div>
+                </li>
+              </ul>
+              <div class="ml-auto flex flex-wrap justify-between gap-x-4 gap-y-2 py-4">
+                <div class="text-xl">Сума замовлення</div>
+                <span class="text-xl font-semibold">4 179 ₴</span>
+              </div>
+              <ul class="space-y-3 py-4">
+                <li class="flex items-center gap-2">
+                  <svg class="h-5 w-5 shrink-0 fill-none stroke-primary-200/70 stroke-[2] sm:h-6 sm:w-6">
+                    <use href="./sprites/sprite.svg#icon-profile"></use>
+                  </svg>
+                  <span class="text-sm md:text-base">Фролов Дмитро</span>
+                </li>
+                <li class="flex items-center gap-2">
+                  <svg class="h-5 w-5 shrink-0 fill-primary-200/70 sm:h-6 sm:w-6">
+                    <use href="./sprites/sprite.svg#icon-location"></use>
+                  </svg>
+                  <span class="text-sm md:text-base">Лубни, Поштомат \"Нова Пошта\" №20455: вул. Садова, 3, в клієнтській зоні відділення №2</span>
+                </li>
+                <li class="flex items-center gap-2">
+                  <svg class="h-5 w-5 shrink-0 fill-primary-200/70 sm:h-6 sm:w-6">
+                    <use href="./sprites/sprite.svg#icon-mail"></use>
+                  </svg>
+                  <span class="text-sm md:text-base">dmitry.conquer@gmail.com</span>
+                </li>
+                <li class="flex items-center gap-2">
+                  <svg class="h-5 w-5 shrink-0 fill-none stroke-primary-200/70 stroke-[2] sm:h-6 sm:w-6">
+                    <use href="./sprites/sprite.svg#icon-phone"></use>
+                  </svg>
+                  <span class="text-sm md:text-base">+380663169394</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="order-1 md:order-2">
+            <p class="font-balsamiq mb-2 text-xl">Статус замовлення</p>
+            <div class="divide-y">
+              <div class="py-2">
+                <p class="text-sm lg:text-base">21.10.2023, 10:06</p>
+                <p class="text-base lg:text-lg">Замовлення принято, плед в процесі пошиття.</p>
+              </div>
+              <div class="py-2">
+                <p class="text-sm lg:text-base">23.10.2023, 14:32</p>
+                <p class="text-base lg:text-lg">Плед передано в службу доставки Нової Пошти.</p>
+              </div>
+              <div class="py-2">
+                <p class="text-sm lg:text-base">24.10.2023, 19:16</p>
+                <p class="text-base lg:text-lg">Товар отримано замовником.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      @@include('components/footer.html', { })
+    </div>
+    <script type="module" crossorigin src="./js/app.min.js"></script>
+  </body>
+</html>
