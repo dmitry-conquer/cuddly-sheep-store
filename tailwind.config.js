@@ -10,9 +10,13 @@ module.exports = {
       md: "768px",
       lg: "1024px",
       xl: "1280px",
-      '2xl': "1440px"
+      "2xl": "1440px",
     },
     extend: {
+      fontSize: {
+        "8xl": "14rem",
+        "9xl": "18.75rem",
+      },
       colors: {
         primary: {
           DEFAULT: "#B3CBE4",
