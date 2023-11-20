@@ -7,7 +7,7 @@
       <main class="grow">
         <section class="bg-secondary-100 pb-8 lg:h-[550px] xl:h-[700px]">
           <div class="container flex h-full flex-col items-center justify-between gap-12 pt-4 lg:flex-row lg:pt-0 2xl:justify-center 2xl:gap-16">
-            <div id="hero-content" class="flex flex-col items-start grow">
+            <div id="hero-content" class="flex grow flex-col items-start">
               <h1 class="sr-only">плюшевий теплий плед Alize Puffy ручної роботи під замовлення Cuddly Sheep</h1>
               <h2 class="mb-6 text-left font-balsamiq text-[46px] leading-[1.1] md:text-6xl xl:mb-8 xl:text-7xl">Все найбільш необхідне для вашого затишку</h2>
               <p class="mb-4 text-base leading-normal sm:mb-10 sm:text-xl xl:mb-12 xl:text-2xl">
@@ -16,11 +16,11 @@
               <a href="" class="block rounded-2xl bg-primary-200 px-6 py-3 font-medium text-white transition-colors duration-200 hover:bg-secondary-300 max-lg:mx-auto">Каталог</a>
             </div>
 
-            <div data-da="#hero-content,1023.98,3" class="relative mx-auto w-[80%] sm:w-[65%] mt-4 sm:mt-0 mb-12 lg:mb-0 lg:w-[45%] shrink-0">
+            <div data-da="#hero-content,1023.98,3" class="relative mx-auto mb-12 mt-4 w-[80%] shrink-0 sm:mt-0 sm:w-[65%] lg:mb-0 lg:w-[45%]">
               <div class="h-full w-full overflow-hidden max-sm:!rounded-2xl">
                 <img src="./img/hero.webp" alt="hero" class="relative z-20 h-full w-full object-cover" />
-                <img src="./img/hero-form.svg" alt="hero" class="absolute right-0 top-1/2 translate-x-14 lg:translate-x-24 -translate-y-[47%] z-10 h-full w-full object-cover" />
-                <img src="./img/dots_hero.webp" alt="hero" class="hidden lg:block absolute right-0 top-0 -translate-x-[60%] w-[60rem] z-30 h-full object-contain" />
+                <img src="./img/hero-form.svg" alt="hero" class="absolute right-0 top-1/2 z-10 h-full w-full -translate-y-[47%] translate-x-14 object-cover lg:translate-x-24" />
+                <img src="./img/dots_hero.webp" alt="hero" class="absolute right-0 top-0 z-30 hidden h-full w-[60rem] -translate-x-[60%] object-contain lg:block" />
               </div>
             </div>
           </div>
@@ -81,17 +81,19 @@
         </section>
 
         <!-- promocode -->
-        <section class="custom-shadow mb-12 mt-24">
-          <div class="relative mx-auto max-w-7xl px-4 py-24">
+        <section class="shadow-md lg:custom-shadow my-6 lg:mb-12 xl:mt-20">
+          <div class="relative mx-auto max-lg:flex max-lg:flex-col max-lg:gap-12  bg-primary/40 lg:bg-white max-lg:items-center max-w-7xl px-4 pt-10 pb-8 sm:py-16 text-center lg:text-left lg:py-24">
             <div class="relative z-10 max-w-[650px]">
-              <p class="mb-4 font-balsamiq text-3xl">
+              <p class="mb-6 md:mb-4 font-balsamiq text-xl sm:text-3xl">
                 Готуємося до зими. <br />
-                Встигніть скористатися купоном <span class="font-balsamiq text-4xl text-secondary-300">CUDDLE24</span> на знижку <span class="text-4xl text-secondary-300"> -15% </span>
+                Встигніть скористатися купоном <span class="font-balsamiq text-2xl sm:text-4xl text-secondary-300">CUDDLE24</span> на знижку <span class=" text-2xl sm:text-4xl text-secondary-300"> -15% </span>
               </p>
               <a href="catalog.html" class="inline-block rounded-2xl bg-primary-200 px-6 py-3 text-center font-medium text-white transition-colors hover:bg-secondary-300 max-lg:mx-auto"> Каталог </a>
             </div>
-            <img src="./img/products/promoform.webp" alt="" class="absolute -right-[15%] bottom-0 z-20 w-[50rem]" />
-            <img src="./img/bg.webp" alt="" class="absolute -right-[21%] bottom-0 w-[60rem]" />
+            <div class="hidden lg:block">
+              <img src="./img/products/promoform.webp" alt="" class="absolute -right-[15%] bottom-0 z-20 w-[45rem] xl:w-[50rem]" />
+              <img src="./img/bg.webp" alt="" class="absolute -right-[21%] bottom-0 w-[55rem] xl:w-[60rem]" />
+            </div>
           </div>
         </section>
 
