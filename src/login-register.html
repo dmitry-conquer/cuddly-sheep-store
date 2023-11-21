@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="uk">
+  @@include('components/head.html', { 'title': 'Мій профіль' })
+  <body>
+    <div class="relative flex min-h-screen flex-col overflow-hidden">
+      @@include('components/header.html', { })
+      <main class="grow">
+        <section class="mx-auto max-w-7xl px-4 py-12 md:py-16">
+          <h1 class="sr-only mb-4 font-balsamiq text-4xl sm:mb-6 sm:text-5xl">Мій профіль</h1>
+          <div class="grid grid-cols-1 max-md:divide-y md:divide-x md:grid-cols-2">
+
+            <div class="w-full max-md:pb-10 md:pr-10">
+              <h2 class="font-balsamiq text-4xl mb-8">Вхід</h2>
+              <div class="space-y-4">
+                <div class="w-full">
+                  <label for="login-cred" class="mb-2 block font-balsamiq text-lg">Логін чи e-mail адреса</label>
+                  <input id="login-cred" type="text" class="w-full rounded-xl border border-primary px-4 py-3 focus:border-primary-200 focus:outline-none" placeholder="dmitry.conquer@gmail.com" />
+                </div>
+                <div class="w-full">
+                  <label for="login-pass-cred" class="mb-2 block font-balsamiq text-lg">Пароль</label>
+                  <input id="login-pass-cred" type="password" class="w-full rounded-xl border border-primary px-4 py-3 focus:border-primary-200 focus:outline-none" placeholder="*********" />
+                </div>
+              </div>
+              <div class="flex items-center gap-4 mt-6">
+                <a href="#" class="rounded-2xl bg-primary-200 px-6 py-3 text-center font-medium text-white transition-colors hover:bg-secondary-300"> Увійти </a>
+                <label class="relative flex items-center gap-2">
+                  <input type="checkbox" class="peer sr-only" />
+                  <svg class="absolute left-0 top-1/2 h-5 w-5 -translate-y-1/2 scale-0 rounded-sm fill-secondary-300 transition-transform peer-checked:scale-100">
+                    <use href="./sprites/sprite.svg#icon-check"></use>
+                  </svg>
+                  <span class="h-4 w-4 shrink-0 rounded-sm border border-primary-200"></span>
+                  <span class="block text-sm font-medium">Запам'ятати мене</span>
+                </label>
+              </div>
+            </div>
+
+            <div class="w-full max-md:pt-10 md:pl-10">
+              <h2 class="font-balsamiq text-4xl mb-8">Реєстрація</h2>
+                <div class="w-full mb-4">
+                  <label for="reg-email" class="mb-2 block font-balsamiq text-lg">E-mail адреса</label>
+                  <input id="reg-email" type="text" class="w-full rounded-xl border border-primary px-4 py-3 focus:border-primary-200 focus:outline-none" placeholder="dmitry.conquer@gmail.com" />
+                </div>
+                <p class="mb-6">На вашу електронну пошту буде надіслано посилання для встановлення пароля.</p>
+                <div>
+                  <a href="#" class="rounded-2xl bg-primary-200 px-6 py-3 text-center font-medium text-white transition-colors hover:bg-secondary-300"> Реєстрація </a>
+                </div>
+            </div>
+
+          </div>
+        </section>
+      </main>
+      @@include('components/footer.html', { })
+    </div>
+    <script type="module" crossorigin src="./js/app.min.js"></script>
+  </body>
+</html>

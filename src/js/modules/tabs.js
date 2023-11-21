@@ -1,4 +1,3 @@
-export function useTabs() {
   const tabs = document.querySelectorAll(".tab");
 
   tabs.forEach(tab => {
@@ -21,4 +20,3 @@ export function useTabs() {
       });
     }
   });
-}

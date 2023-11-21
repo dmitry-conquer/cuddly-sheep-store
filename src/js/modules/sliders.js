@@ -1,6 +1,5 @@
 import Swiper, { Navigation, Autoplay, FreeMode } from "swiper";
 
-export function useSliders() {
   const productsSliders = document.querySelectorAll(".slider-products");
   productsSliders.forEach(slider => {
     if (slider) {
@@ -134,4 +133,3 @@ export function useSliders() {
       },
     });
   }
-}

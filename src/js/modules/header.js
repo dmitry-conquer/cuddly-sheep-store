@@ -1,4 +1,3 @@
-export function useHeader() {
   const burgerButton = document.getElementById("burger-button");
   const burgerInner = document.getElementById("burger-inner");
   const burgerCross = document.getElementById("burger-cross");
@@ -24,4 +23,3 @@ export function useHeader() {
       }
     });
   }
-}

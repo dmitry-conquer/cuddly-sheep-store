@@ -1,18 +1,13 @@
-// import { initSpoiler, initDdropdown } from './modules/spoilers.js';
-import { useSliders } from "./modules/sliders.js";
-import { inputMask } from "./modules/imask.js";
 import { useDynamicAdapt } from "./modules/dynamicAdapt.js";
-import { useTabs } from "./modules/tabs.js";
-import { useHeader } from "./header.js";
+import "./modules/sliders.js";
+import  "./modules/imask.js";
+import  "./modules/tabs.js";
+import "./modules/header.js";
 import MicroModal from "micromodal";
 // import AOS from 'aos';
 
 function app() {
   useDynamicAdapt("max");
-  useSliders();
-  useHeader();
-  inputMask();
-  useTabs();
 
   const bigImage = document.querySelector(".big-img");
   const thumbnails = document.querySelectorAll(".thumbnail");

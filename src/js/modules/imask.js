@@ -1,6 +1,5 @@
 import IMask from "imask";
 
-export function inputMask() {
   const maskOptions = {
     mask: "+{38}(000)000-00-00",
     lazy: true,
@@ -11,4 +10,3 @@ export function inputMask() {
       IMask(input, maskOptions);
     }
   });
-}

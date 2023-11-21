@@ -35,6 +35,7 @@ module.exports = {
     fontFamily: {
       balsamiq: ["Balsamiq Sans", "sans-serif"],
       montserrat: ["Montserrat", "sans-serif"],
+      comfortaa: ["Comfortaa", "sans-serif"],
     },
   },
   plugins: [require("@tailwindcss/typography")],
