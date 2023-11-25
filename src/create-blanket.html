@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="uk">
+  @@include('components/head.html', { 'title': 'Cart' })
+  <body>
+    <div class="relative flex min-h-screen flex-col">
+      @@include('components/header.html', { })
+      <main class="grow">
+        <section class="py-6 md:py-14">
+          <div class="container">
+            <h1 class="mb-8 text-center font-balsamiq text-4xl">Створи свій плед мрії</h1>
+            <div id="create-blanket-form-wrapper" data-yarn-price="85" data-work-prices="250,500,750,900" data-price-steps="7,15,22" data-yarn-square="1440" data-over-yarn="1"  class="">
+              <form action="#">
+                <div>
+                  <h2 class="mb-4 font-balsamiq text-2xl">Обери тип в'язки</h2>
+                </div>
+
+                <div>
+                  <h2 class="mb-4 font-balsamiq text-2xl">Обери колір пряжі для пледа</h2>
+                  <div>
+                    <!-- blue -->
+                    <div>
+                      <div role="button" class="spoiler-trigger active-spoiler flex items-center gap-2 px-4 py-3">
+                        <h3>Сині (показати всі)</h3>
+                        <svg class="h-5 w-5 rotate-90 fill-none stroke-primary-200 transition-all duration-300">
+                          <use href="./sprites/sprite.svg#icon-arrow"></use>
+                        </svg>
+                      </div>
+
+                      <div class="active-spoiler-content max-h-0 overflow-hidden transition-all duration-300 will-change-auto">
+                        <div class="flex flex-wrap gap-4 p-5 pt-0">
+                          <label class="relative flex cursor-pointer flex-col items-center rounded-md p-4 shadow-md">
+                            <input type="radio" name="color-pick" value="Дитячий синій, №141" class="peer sr-only"  />
+                            <span class="absolute left-0 top-0 h-full w-full rounded-md border-2 border-transparent peer-checked:border-secondary-300"></span>
+                            <img src="./img/puffy/blue-141.webp" alt="" class="h-40 w-40 object-contain" />
+                            <h4 class="font-balsamiq">Дитячий синій, №141</h4>
+                          </label>
+                          <label class="relative flex flex-col items-center rounded-md p-4 shadow-md">
+                            <input type="radio" name="color-pick" value="Темно синій, №183" class="peer sr-only" checked/>
+                            <span class="absolute left-0 top-0 h-full w-full rounded-md border-2 border-transparent peer-checked:border-secondary-300"></span>
+                            <img src="./img/puffy/blue-183.webp" alt="" class="h-40 w-40 object-contain" />
+                            <h4 class="font-balsamiq">Темно синій, №183</h4>
+                          </label>
+                          <label class="relative flex flex-col items-center rounded-md p-4 shadow-md">
+                            <input type="radio" name="color-pick" value="Небо, №289" class="peer sr-only" />
+                            <span class="absolute left-0 top-0 h-full w-full rounded-md border-2 border-transparent peer-checked:border-secondary-300"></span>
+                            <img src="./img/puffy/blue-289.webp" alt="" class="h-40 w-40 object-contain" />
+                            <h4 class="font-balsamiq">Небо, №289</h4>
+                          </label>
+                          <label class="relative flex flex-col items-center rounded-md p-4 shadow-md">
+                            <input type="radio" name="color-pick" value="Лазурний, №374" class="peer sr-only" />
+                            <span class="absolute left-0 top-0 h-full w-full rounded-md border-2 border-transparent peer-checked:border-secondary-300"></span>
+                            <img src="./img/puffy/blue-374.webp" alt="" class="h-40 w-40 object-contain" />
+                            <h4 class="font-balsamiq">Лазурний, №374</h4>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div>
+                  <h2 class="mb-4 font-balsamiq text-2xl">Вкажи бажані розміри</h2>
+                  <div class="flex gap-4">
+                    <input type="number" id="blanket-width" class="rounded-xl border border-primary px-4 py-3 focus:border-primary-200 focus:outline-none" placeholder="Ширина (см.)" />
+                    <input type="number" id="blanket-length" class="rounded-xl border border-primary px-4 py-3 focus:border-primary-200 focus:outline-none" placeholder="Довжина (см.)" />
+                  </div>
+                </div>
+
+                <div class="custom-shadow sticky bottom-0 mt-12 rounded-lg bg-white p-4">
+                  <div class="flex items-center gap-2">
+                    <p class="shrink-0 font-balsamiq">Тип в'язки:</p>
+                    <input type="text" disabled class="w-full bg-transparent" id="blanket-type-result" />
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <p class="shrink-0 font-balsamiq">Колір пледа:</p>
+                    <input type="text" disabled class="w-full bg-transparent" id="blanket-color-result" />
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <p class="shrink-0 font-balsamiq">Розміри пледа:</p>
+                    <input type="text" disabled class="w-full bg-transparent" id="blanket-size-result" />
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <p class="shrink-0 font-balsamiq">Фінальна ціна:</p>
+                    <input type="text" disabled class="w-full bg-transparent" id="blanket-price-result" />
+                  </div>
+                </div>
+
+                <div class="mb-12">
+                  <h2 class="mb-4 font-balsamiq text-2xl">Контактна інформація</h2>
+                  <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+                    <input type="text" class="rounded-xl border border-primary px-4 py-3 focus:border-primary-200 focus:outline-none" placeholder="Ім'я" />
+                    <input type="text" class="rounded-xl border border-primary px-4 py-3 focus:border-primary-200 focus:outline-none" placeholder="Прізвище" />
+                    <input type="email" class="rounded-xl border border-primary px-4 py-3 focus:border-primary-200 focus:outline-none" placeholder="Електрона пошта" />
+                    <input type="tel" class="tel-mask rounded-xl border border-primary px-4 py-3 focus:border-primary-200 focus:outline-none" placeholder="Номер телефону" />
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </section>
+      </main>
+      @@include('components/footer.html', { })
+    </div>
+    <script type="module" crossorigin src="./js/app.min.js"></script>
+  </body>
+</html>
