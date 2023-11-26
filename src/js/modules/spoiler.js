@@ -18,6 +18,7 @@ function showSpoiler() {
   //   spoilerContent.setAttribute("aria-hidden", spoilerContent.getAttribute("aria-hidden") === "true" ? "false" : "true");
   //   spoilerContent.style.maxHeight = null;
   // });
+
   this.classList.toggle("active-spoiler");
 
   const spoilerContent = this.nextElementSibling;
@@ -26,3 +27,10 @@ function showSpoiler() {
   const isExpanded = spoilerContent.classList.contains("active-spoiler-content");
   spoilerContent.style.maxHeight = isExpanded ? `${spoilerContent.scrollHeight}px` : "0px";
 }
+
+window.addEventListener('resize', () => {
+  const activeSpoilerContects = document.querySelectorAll('.active-spoiler-content');
+  activeSpoilerContects.forEach(content => {
+    content.style.maxHeight = `${content.scrollHeight}px`;
+  })
+});

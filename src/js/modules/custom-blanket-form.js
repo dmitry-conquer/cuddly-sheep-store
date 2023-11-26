@@ -12,15 +12,16 @@ const workPriceSteps = formWrapper.dataset.priceSteps.split(",");
 const yarnSquare = formWrapper.dataset.yarnSquare;
 const overYarn = formWrapper.dataset.overYarn;
 
+
 function updateSize() {
-  const width = +blanketWidth.value;
-  const length = +blanketLength.value;
-  blanketSizeResult.value = `${width} см x ${length} см`;
+  const width = blanketWidth.value || 0;
+  const length = blanketLength.value || 0;
+  blanketSizeResult.textContent = `${width} см x ${length} см`;
+  
   updatePrice(width, length);
 }
 function updateColor() {
-  const currentColorValue = [...colors].find(color => color.checked)?.value || null;
-  blanketColorResult.value = this ? this.value : currentColorValue;
+  blanketColorResult.textContent = this ? this.value : [...colors].find(color => color.checked)?.value || null;
 }
 function updatePrice(width, length) {
   let result;
@@ -36,7 +37,7 @@ function updatePrice(width, length) {
       result = +yarnsAmount * +yarnPrice + +workPrices[workPrices.length - 1];
     }
   }
-  blanketPriceResult.value = width * length !== 0 ? `${result} ₴` : `${0} ₴`;
+  blanketPriceResult.textContent = width * length !== 0 ? `${result} ₴` : `${0} ₴`;
 }
 
 updateSize();

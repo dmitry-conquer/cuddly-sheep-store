@@ -8,12 +8,21 @@
         <section class="py-6 md:py-14">
           <div class="container">
             <h1 class="mb-8 text-center font-balsamiq text-4xl">Створи свій плед мрії</h1>
-            <div id="create-blanket-form-wrapper" data-yarn-price="85" data-work-prices="250,500,750,900" data-price-steps="7,15,22" data-yarn-square="1440" data-over-yarn="1"  class="">
-              <form action="#">
+            <div
+              id="create-blanket-form-wrapper"
+              data-yarn-price="85"
+              data-work-prices="250,500,750,900"
+              data-price-steps="7,15,22"
+              data-yarn-square="1440"
+              data-over-yarn="1"
+              class="grid grid-cols-1 items-start gap-8 lg:grid-cols-[1fr_35%] lg:gap-12">
+              <div class="space-y-12">
+                <!-- pattern pick -->
                 <div>
                   <h2 class="mb-4 font-balsamiq text-2xl">Обери тип в'язки</h2>
                 </div>
 
+                <!-- colors -->
                 <div>
                   <h2 class="mb-4 font-balsamiq text-2xl">Обери колір пряжі для пледа</h2>
                   <div>
@@ -25,28 +34,27 @@
                           <use href="./sprites/sprite.svg#icon-arrow"></use>
                         </svg>
                       </div>
-
                       <div class="active-spoiler-content max-h-0 overflow-hidden transition-all duration-300 will-change-auto">
-                        <div class="flex flex-wrap gap-4 p-5 pt-0">
+                        <div class="grid grid-cols-[repeat(auto-fit,_minmax(150px,_1fr))] gap-4 p-5 pt-0">
                           <label class="relative flex cursor-pointer flex-col items-center rounded-md p-4 shadow-md">
-                            <input type="radio" name="color-pick" value="Дитячий синій, №141" class="peer sr-only"  />
+                            <input type="radio" name="color-pick" value="Дитячий синій, №141" class="peer sr-only" />
                             <span class="absolute left-0 top-0 h-full w-full rounded-md border-2 border-transparent peer-checked:border-secondary-300"></span>
                             <img src="./img/puffy/blue-141.webp" alt="" class="h-40 w-40 object-contain" />
                             <h4 class="font-balsamiq">Дитячий синій, №141</h4>
                           </label>
-                          <label class="relative flex flex-col items-center rounded-md p-4 shadow-md">
-                            <input type="radio" name="color-pick" value="Темно синій, №183" class="peer sr-only" checked/>
+                          <label class="relative flex cursor-pointer flex-col items-center rounded-md p-4 shadow-md">
+                            <input type="radio" name="color-pick" value="Темно синій, №183" class="peer sr-only" checked />
                             <span class="absolute left-0 top-0 h-full w-full rounded-md border-2 border-transparent peer-checked:border-secondary-300"></span>
                             <img src="./img/puffy/blue-183.webp" alt="" class="h-40 w-40 object-contain" />
                             <h4 class="font-balsamiq">Темно синій, №183</h4>
                           </label>
-                          <label class="relative flex flex-col items-center rounded-md p-4 shadow-md">
+                          <label class="relative flex cursor-pointer flex-col items-center rounded-md p-4 shadow-md">
                             <input type="radio" name="color-pick" value="Небо, №289" class="peer sr-only" />
                             <span class="absolute left-0 top-0 h-full w-full rounded-md border-2 border-transparent peer-checked:border-secondary-300"></span>
                             <img src="./img/puffy/blue-289.webp" alt="" class="h-40 w-40 object-contain" />
                             <h4 class="font-balsamiq">Небо, №289</h4>
                           </label>
-                          <label class="relative flex flex-col items-center rounded-md p-4 shadow-md">
+                          <label class="relative flex cursor-pointer flex-col items-center rounded-md p-4 shadow-md">
                             <input type="radio" name="color-pick" value="Лазурний, №374" class="peer sr-only" />
                             <span class="absolute left-0 top-0 h-full w-full rounded-md border-2 border-transparent peer-checked:border-secondary-300"></span>
                             <img src="./img/puffy/blue-374.webp" alt="" class="h-40 w-40 object-contain" />
@@ -58,43 +66,47 @@
                   </div>
                 </div>
 
+                <!-- sizes inputs -->
                 <div>
-                  <h2 class="mb-4 font-balsamiq text-2xl">Вкажи бажані розміри</h2>
-                  <div class="flex gap-4">
-                    <input type="number" id="blanket-width" class="rounded-xl border border-primary px-4 py-3 focus:border-primary-200 focus:outline-none" placeholder="Ширина (см.)" />
-                    <input type="number" id="blanket-length" class="rounded-xl border border-primary px-4 py-3 focus:border-primary-200 focus:outline-none" placeholder="Довжина (см.)" />
+                  <h2 class="mb-4 font-balsamiq text-2xl">Вкажіть бажані розміри (см)</h2>
+                  <div class="flex items-center gap-3">
+                    <input type="number" id="blanket-width" class="rounded-xl w-full border border-primary px-4 py-3 focus:border-primary-200 focus:outline-none" placeholder="Ширина (см)" />
+                    <span class="text-lg">x</span>
+                    <input type="number" id="blanket-length" class="rounded-xl w-full border border-primary px-4 py-3 focus:border-primary-200 focus:outline-none" placeholder="Довжина (см)" />
                   </div>
                 </div>
+              </div>
 
-                <div class="custom-shadow sticky bottom-0 mt-12 rounded-lg bg-white p-4">
-                  <div class="flex items-center gap-2">
-                    <p class="shrink-0 font-balsamiq">Тип в'язки:</p>
-                    <input type="text" disabled class="w-full bg-transparent" id="blanket-type-result" />
+              <div class="border-x border-b bg-white pt-3 lg:sticky top-6">
+                <span class="absolute left-0 top-0 h-2.5 w-full rounded-lg bg-secondary"></span>
+                <div class="divide-y px-6 py-4">
+                  <div class="flex flex-wrap justify-between gap-x-4 gap-y-1 py-3 text-lg font-medium uppercase">
+                    <h2 class="font-balsamiq text-lg uppercase">Ваш зібраний плед</h2>
                   </div>
-                  <div class="flex items-center gap-2">
-                    <p class="shrink-0 font-balsamiq">Колір пледа:</p>
-                    <input type="text" disabled class="w-full bg-transparent" id="blanket-color-result" />
+                  <div class="space-y-2 divide-y rounded-t-xl rounded-bl-xl py-3">
+                    <div class="flex justify-start gap-x-4 gap-y-1 py-2 max-sm:flex-wrap sm:justify-between">
+                      <h3 class="mb-2 w-full text-sm sm:mb-0">Тип в'язки:</h3>
+                      <p class="w-full bg-transparent text-right font-balsamiq text-lg" id="blanket-type-result">-</p>
+                    </div>
                   </div>
-                  <div class="flex items-center gap-2">
-                    <p class="shrink-0 font-balsamiq">Розміри пледа:</p>
-                    <input type="text" disabled class="w-full bg-transparent" id="blanket-size-result" />
+                  <div class="space-y-2 divide-y rounded-t-xl rounded-bl-xl py-3">
+                    <div class="flex justify-start gap-x-4 gap-y-1 py-2 max-sm:flex-wrap sm:justify-between">
+                      <h3 class="mb-2 w-full text-sm sm:mb-0">Колір пледу:</h3>
+                      <p class="w-full bg-transparent text-right font-balsamiq text-lg" id="blanket-color-result">-</p>
+                    </div>
                   </div>
-                  <div class="flex items-center gap-2">
-                    <p class="shrink-0 font-balsamiq">Фінальна ціна:</p>
-                    <input type="text" disabled class="w-full bg-transparent" id="blanket-price-result" />
+                  <div class="space-y-2 divide-y rounded-t-xl rounded-bl-xl py-3">
+                    <div class="flex justify-start gap-x-4 gap-y-1 py-2 max-sm:flex-wrap sm:justify-between">
+                      <h3 class="mb-2 w-full text-sm sm:mb-0">Розмір пледу:</h3>
+                      <p class="w-full bg-transparent text-right font-balsamiq text-lg" id="blanket-size-result">-</p>
+                    </div>
+                  </div>
+                  <div class="ml-auto flex justify-between gap-x-4 gap-y-2 py-3">
+                    <div class="shrink-0 text-xl">Вартість пледу</div>
+                    <p class="w-full bg-transparent text-right font-balsamiq text-xl" id="blanket-price-result">-</p>
                   </div>
                 </div>
-
-                <div class="mb-12">
-                  <h2 class="mb-4 font-balsamiq text-2xl">Контактна інформація</h2>
-                  <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
-                    <input type="text" class="rounded-xl border border-primary px-4 py-3 focus:border-primary-200 focus:outline-none" placeholder="Ім'я" />
-                    <input type="text" class="rounded-xl border border-primary px-4 py-3 focus:border-primary-200 focus:outline-none" placeholder="Прізвище" />
-                    <input type="email" class="rounded-xl border border-primary px-4 py-3 focus:border-primary-200 focus:outline-none" placeholder="Електрона пошта" />
-                    <input type="tel" class="tel-mask rounded-xl border border-primary px-4 py-3 focus:border-primary-200 focus:outline-none" placeholder="Номер телефону" />
-                  </div>
-                </div>
-              </form>
+              </div>
             </div>
           </div>
         </section>
