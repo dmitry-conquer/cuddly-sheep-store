@@ -1,3 +1,5 @@
+'use strict'
+
 import { useDynamicAdapt } from "./modules/dynamicAdapt.js";
 import "./modules/sliders.js";
 import  "./modules/imask.js";

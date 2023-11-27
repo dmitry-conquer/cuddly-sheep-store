@@ -1,3 +1,5 @@
+'use strict'
+
 const formWrapper = document.getElementById("create-blanket-form-wrapper");
 const blanketTypeResult = document.getElementById("blanket-type-result");
 const blanketColorResult = document.getElementById("blanket-color-result");
@@ -37,7 +39,7 @@ function updatePrice(width, length) {
       result = +yarnsAmount * +yarnPrice + +workPrices[workPrices.length - 1];
     }
   }
-  blanketPriceResult.textContent = width * length !== 0 ? `${result} ₴` : `${0} ₴`;
+  blanketPriceResult.textContent = width * length !== 0 ? `${result} грн` : `${0} грн`;
 }
 
 updateSize();

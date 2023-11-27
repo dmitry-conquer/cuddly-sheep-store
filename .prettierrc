@@ -5,7 +5,7 @@
   "endOfLine": "lf",
   "bracketSameLine": true,
   "htmlWhitespaceSensitivity": "css",
-  "printWidth": 200,
+  "printWidth": 150,
   "quoteProps": "as-needed",
   "semi": true,
   "singleQuote": false,
