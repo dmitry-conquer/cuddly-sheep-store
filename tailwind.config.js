@@ -38,5 +38,8 @@ module.exports = {
       comfortaa: ["Comfortaa", "sans-serif"],
     },
   },
+  future: {
+    hoverOnlyWhenSupported: true,
+  },
   plugins: [require("@tailwindcss/typography")],
 };

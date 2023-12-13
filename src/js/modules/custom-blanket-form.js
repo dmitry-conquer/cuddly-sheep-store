@@ -3,11 +3,13 @@
 const formWrapper = document.getElementById("create-blanket-form-wrapper");
 
 if (formWrapper) {
-  const blanketTypeResult = document.getElementById("blanket-type-result");
+  // const blanketTypeResult = document.getElementById("blanket-type-result");
+  const blanketPattentResult = document.getElementById("blanket-pattern-result");
   const blanketColorResult = document.getElementById("blanket-color-result");
   const blanketSizeResult = document.getElementById("blanket-size-result");
   const blanketPriceResult = document.getElementById("blanket-price-result");
   const colors = document.getElementsByName("color-pick");
+  const patterns = document.getElementsByName("pattern-pick");
   const blanketWidth = document.getElementById("blanket-width");
   const blanketLength = document.getElementById("blanket-length");
   const yarnPrice = formWrapper.dataset.yarnPrice;
@@ -25,6 +27,9 @@ if (formWrapper) {
   }
   function updateColor() {
     blanketColorResult.textContent = this ? this.value : [...colors].find(color => color.checked)?.value || null;
+  }
+  function updatePattern() {
+    blanketPattentResult.textContent = this ? this.value : [...patterns].find(pattern => pattern.checked)?.value || null;
   }
   function updatePrice(width, length) {
     let result;
@@ -45,10 +50,14 @@ if (formWrapper) {
 
   updateSize();
   updateColor();
+  updatePattern();
 
   blanketWidth.addEventListener("input", updateSize);
   blanketLength.addEventListener("input", updateSize);
   colors.forEach(color => {
     color.addEventListener("change", () => updateColor());
+  });
+  patterns.forEach(pattern => {
+    pattern.addEventListener("change", () => updatePattern());
   });
 }
