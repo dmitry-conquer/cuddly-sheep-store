@@ -1,18 +1,37 @@
 /* Import lib styles  */
-// @import '../../node_modules/swiper/swiper.scss';
-// @import '../../node_modules/swiper/modules/navigation/navigation.scss';
+@import '../../node_modules/swiper/swiper.scss';
+@import '../../node_modules/swiper/modules/navigation/navigation.scss';
 // @import '../../node_modules/swiper/modules/autoplay/autoplay.scss';
 // @import '../../node_modules/swiper/modules/pagination/pagination.scss';
 @import "../../node_modules/swiper/modules/free-mode/free-mode.scss";
-// @import '../../node_modules/swiper/modules/scrollbar/scrollbar.scss';
-// @import '../../node_modules/nouislider/dist/nouislider.min';
-// @import '../../node_modules/aos/src/sass/aos.scss';
+@import '../../node_modules/aos/src/sass/aos.scss';
 
 @import "fonts";
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Lenis smooth scroll */
+html.lenis {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
 
 @layer base {
   html {
@@ -109,6 +128,25 @@
       }
     }
   }
+
+  /*
+    profile dropdown
+  */
+  .open-profile-button.dd-is-active {
+    & + .sub-menu {
+      @apply visible opacity-100;
+    }
+  }
+
+  .has-child.dd-is-active {
+    & svg {
+      @apply -rotate-90;
+    }
+    & + .sub-menu {
+      @apply lg:visible lg:translate-y-0 lg:opacity-100;
+    }
+  }
+
 }
 
 @layer utilities {

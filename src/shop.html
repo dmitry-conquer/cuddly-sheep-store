@@ -5,9 +5,13 @@
     <div class="relative flex min-h-screen flex-col overflow-hidden">
       @@include('components/header.html', { })
       <main class="grow">
-        <h1 class="sr-only">Каталог</h1>
-        <section class="container py-6 md:py-14">
-          <h2 class="mb-4 font-balsamiq text-4xl sm:mb-6 sm:text-5xl">Категорії</h2>
+        <div class="container mt-12 mb-7 flex items-center gap-2">
+          <a href="/" class="hover:underline">Головна</a>
+          •
+          <a href="payment-delivery.html" class="hover:underline">Назва категорії*</a>
+        </div>
+        <section class="container pb-6 md:pb-14">
+          <h2 class="mb-4 font-balsamiq text-4xl sm:mb-6 sm:text-5xl">Назва категорії*</h2>
           <div class="grid auto-rows-[8rem] grid-cols-1 gap-4 sm:auto-rows-[12rem] sm:grid-cols-2 sm:gap-6 lg:grid-cols-4">
             <a href="#" class="group relative overflow-hidden rounded-lg">
               <div class="absolute left-1/2 top-1/2 z-10 -translate-x-1/2 -translate-y-1/2 font-balsamiq text-2xl text-white">Плетінка</div>

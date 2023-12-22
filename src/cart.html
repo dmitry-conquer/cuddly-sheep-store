@@ -5,7 +5,12 @@
     <div class="relative flex min-h-screen flex-col overflow-hidden">
       @@include('components/header.html', { })
       <main class="grow">
-        <section class="container py-6 md:py-14">
+        <div class="container mt-12 mb-7 flex items-center gap-2">
+          <a href="/" class="hover:underline">Головна</a>
+          •
+          <a href="payment-delivery.html" class="hover:underline">Кошик</a>
+        </div>
+        <section class="container pb-6 md:pb-14">
           <h1 class="font-balsamiq text-4xl sm:mb-6 sm:text-5xl">Кошик</h1>
           <div class="grid w-full grid-cols-1 items-start gap-x-16 gap-y-8 lg:grid-cols-[auto_22rem]">
             <div class="w-full divide-y">

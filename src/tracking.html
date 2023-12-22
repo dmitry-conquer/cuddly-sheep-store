@@ -5,7 +5,12 @@
     <div class="relative flex min-h-screen flex-col overflow-hidden">
       @@include('components/header.html', { })
       <main class="grow">
-        <section class="mx-auto max-w-7xl px-4 py-6 md:py-14">
+        <div class="container mt-12 mb-7 flex items-center gap-2">
+          <a href="/" class="hover:underline">Головна</a>
+          •
+          <a href="payment-delivery.html" class="hover:underline">Пошук замовлення</a>
+        </div>
+        <section class="mx-auto max-w-7xl pb-4 pи-6 md:pb-14">
           <h1 class="mb-4 sm:mb-6 font-balsamiq text-4xl sm:text-5xl">Пошук замовлення</h1>
           <p class="mb-8 text-base sm:text-lg">
             Щоб переглянути стан вашого замовлення, будь ласка, введіть код замовлення у поле нижче та натисніть кнопку "Переглянути". Код замовлення є у вашому рахунку та у листі-підтвердженні, який

@@ -10,8 +10,8 @@ import "./modules/load-more.js";
 import "./modules/scroll.js";
 import "./modules/spoiler.js";
 import "./modules/custom-blanket-form.js";
+import "./modules/dropdown.js";
 import MicroModal from "micromodal";
-// import AOS from 'aos';
 
 function app() {
   const hoverClickTargets = document.querySelectorAll(".hover-click-target");
@@ -40,22 +40,6 @@ function app() {
   }
 
   /**
-   * Delegation
-   */
-
-  document.addEventListener("click", e => {
-    if (!e.target.closest(".hover-click-target")) {
-      if (isMobile.any()) {
-        hoverClickTargets.forEach(el => {
-          if (el.classList.contains("active")) {
-            el.classList.remove("active");
-          }
-        })
-      }
-    }
-  });
-
-  /**
    * Separation of hover and click
    */
   hoverClickTargets.forEach(el => {
@@ -71,6 +55,13 @@ function app() {
       }
     });
   });
+
+  /**
+   * Prevent click on link
+   */
+  const preventLinks = document.querySelectorAll(".prevent-link");
+  preventLinks.forEach(link => link.addEventListener("click", e => e.preventDefault()));
+
 }
 
 document.addEventListener("DOMContentLoaded", app);

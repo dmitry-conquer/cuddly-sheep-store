@@ -5,7 +5,9 @@
       <a href="/" class="hover-click-target flex items-center gap-2">
         <img src="../img/logo-pink.webp" alt="logo" class="h-12 w-12" />
         <div>
-          <p class="items-center text-left font-balsamiq text-2xl transition-colors md:text-3xl">Cuddly <span class="text-secondary-300">Sheep</span></p>
+          <p class="items-center text-left font-balsamiq text-2xl transition-colors md:text-3xl">
+            Cuddly <span class="text-secondary-300">Sheep</span>
+          </p>
           <p class="font-comfortaa text-xs font-medium transition-colors md:text-sm">Ніжність тисячі обійм</p>
         </div>
       </a>
@@ -16,22 +18,75 @@
   <div class="container relative flex flex-row-reverse items-center justify-between py-4 lg:flex-row lg:py-7">
     <nav
       id="header-nav"
-      class="bg-light fixed left-0 z-[888] mt-[4.5rem] flex flex-col items-center gap-12 pt-24 transition-all duration-500 max-lg:top-0 max-lg:min-h-screen max-lg:w-[320px] max-lg:-translate-x-full max-lg:bg-primary-200 max-lg:shadow-lg max-sm:w-full md:mt-7 lg:static lg:mt-0 lg:gap-8 lg:p-0">
+      class="bg-light fixed left-0 z-[888] mt-[4.5rem] flex flex-col items-center gap-12 pt-24 transition-all duration-500 max-lg:top-0 max-lg:min-h-screen max-lg:w-[320px] max-lg:-translate-x-full max-lg:bg-primary-200 max-lg:shadow-lg max-sm:w-full md:mt-[7rem] lg:static lg:mt-0 lg:gap-8 lg:p-0">
       <ul class="flex flex-col flex-wrap items-center gap-8 lg:flex-row">
-        <li class="hover-stroke">
+        <li>
           <a href="/" class="text-xl text-secondary-100 transition-colors hover:text-secondary-300 lg:text-base lg:text-primary-200">Головна</a>
         </li>
-        <li class="hover-stroke">
-          <a href="shop.html" class="text-xl text-secondary-100 transition-colors hover:text-secondary-300 lg:text-base lg:text-primary-200">Каталог</a>
+        <li class="relative">
+          <a
+            href="shop.html"
+            data-mob-spoiler="1024"
+            class="has-child dd-trigger prevent-link group flex items-center justify-center gap-2 text-xl text-secondary-100 transition-colors hover:text-secondary-300 lg:text-base lg:text-primary-200"
+            >
+            <span>Каталог</span>
+            <svg class='w-4 h-4 rotate-90 stroke-secondary-100 group-hover:stroke-secondary-300 lg:stroke-primary-200 fill-none transition-all'>
+              <use href='./sprites/sprite.svg#icon-arrow'></use>
+            </svg>
+            </a
+          >
+          <div  class="sub-menu lg:bg-white max-lg:max-h-0 max-lg:overflow-hidden lg:rounded-xl  lg:shadow-lg transition-all duration-300 lg:opacity-0 lg:invisible  lg:absolute lg:left-0 lg:top-[calc(100%+5px)] lg:w-[220px]">
+            <ul class="flex flex-col gap-3 max-lg:pb-0 p-4">
+              <li>
+                <a href="shop.html" class="text-secondary-100 lg:text-primary-200 hover:underline flex items-center gap-5">
+                  <img src="./img/menu-icons/blanket.svg" alt="Пледи" class="w-6 h-6 object-contain hidden lg:block">
+                  <span>Пледи</span>
+                </a>
+              </li>
+              <li>
+                <a href="shop.html" class="text-secondary-100 lg:text-primary-200 hover:underline flex items-center gap-5">
+                  <img src="./img/menu-icons/clothes.svg" alt="Одяг" class="w-6 h-6 object-contain hidden lg:block">
+                  <span>Одяг</span>
+                </a>
+              </li>
+              <li>
+                <a href="shop.html" class="text-secondary-100 lg:text-primary-200 hover:underline flex items-center gap-5">
+                  <img src="./img/menu-icons/baby.svg" alt="Для дітей" class="w-6 h-6 object-contain hidden lg:block">
+                  <span>Для дітей</span>
+                </a>
+              </li>
+              <li>
+                <a href="shop.html" class="text-secondary-100 lg:text-primary-200 hover:underline flex items-center gap-5">
+                  <img src="./img/menu-icons/box.svg" alt="Набори" class="w-6 h-6 object-contain hidden lg:block">
+                  <span>Набори</span>
+                </a>
+              </li>
+              <li>
+                <a href="shop.html" class="text-secondary-100 lg:text-primary-200 hover:underline flex items-center gap-5">
+                  <img src="./img/menu-icons/toy.svg" alt="Іграшки" class="w-6 h-6 object-contain hidden lg:block">
+                  <span>Іграшки</span>
+                </a>
+              </li>
+            </ul>
+          </div>
         </li>
-        <li class="hover-stroke">
-          <a href="contacts.html" class="text-xl text-secondary-100 transition-colors hover:text-secondary-300 lg:text-base lg:text-primary-200">Контакти</a>
+        <li>
+          <a href="contacts.html" class="text-xl text-secondary-100 transition-colors hover:text-secondary-300 lg:text-base lg:text-primary-200"
+            >Контакти</a
+          >
         </li>
-        <li class="hover-stroke">
-          <a href="tracking.html" class="text-xl text-secondary-100 transition-colors hover:text-secondary-300 lg:text-base lg:text-primary-200">Відстежити</a>
+        <li>
+          <a href="tracking.html" class="text-xl text-secondary-100 transition-colors hover:text-secondary-300 lg:text-base lg:text-primary-200"
+            >Відстежити</a
+          >
         </li>
-        <li class="hover-stroke">
+        <li>
           <a href="404.html" class="text-xl text-secondary-100 transition-colors hover:text-secondary-300 lg:text-base lg:text-primary-200">404</a>
+        </li>
+        <li>
+          <a href="create-blanket.html" class="text-xl text-secondary-100 transition-colors hover:text-secondary-300 lg:text-base lg:text-primary-200"
+            >Створити світ плед</a
+          >
         </li>
       </ul>
       <div class="block lg:hidden">
@@ -53,16 +108,16 @@
       </div>
     </nav>
     <div class="flex items-center gap-6">
-      <div class="group/profparent cursor-pointer sm:relative">
-        <div class="group flex items-center gap-2">
-          <svg class="h-6 w-6 fill-none stroke-primary-300 stroke-[1.5] group-hover:stroke-secondary-300">
+      <div class="sm:relative">
+        <div role="button" class="open-profile-button dd-trigger group flex cursor-pointer items-center gap-2">
+          <svg class="h-6 w-6 fill-none stroke-primary-300 stroke-[1.5] group-hover:stroke-secondary-300 transition-colors">
             <use href="./sprites/sprite.svg#icon-profile"></use>
           </svg>
           <span class="hidden transition-colors group-hover:text-secondary-300 xl:block">Особистий кабінет</span>
         </div>
 
         <div
-          class="invisible absolute right-10 top-[80%] z-[999] w-[280px] translate-y-2 rounded-xl bg-white px-6 pb-6 pt-8 opacity-0 shadow-lg transition-all group-hover/profparent:visible group-hover/profparent:translate-y-0 group-hover/profparent:opacity-100 sm:right-0 sm:top-[calc(100%+5px)]">
+          class="sub-menu invisible absolute right-10 top-[80%] z-[999] w-[280px] translate-y-2 rounded-xl bg-white px-6 pb-6 pt-8 opacity-0 shadow-lg transition-all sm:right-0 sm:top-[calc(100%+5px)]">
           <!-- is-logined -->
           <div>
             <div class="mb-6 flex flex-col">
@@ -118,7 +173,7 @@
       <a href="cart.html" class="group flex items-center gap-2">
         <div href="#" class="relative">
           <span class="absolute -right-1.5 -top-1.5 grid h-4 w-4 place-content-center rounded-full bg-secondary pt-0.5 text-sm leading-none">1</span>
-          <svg class="h-6 w-6 fill-primary-300 group-hover:fill-secondary-300">
+          <svg class="h-6 w-6 fill-primary-300 group-hover:fill-secondary-300 transition-colors">
             <use href="./sprites/sprite.svg#icon-cart"></use>
           </svg>
         </div>
@@ -127,7 +182,9 @@
     </div>
     <button id="burger-button" class="group relative z-[999] block lg:hidden">
       <div class="relative flex h-[50px] w-[40px] transform items-center justify-center overflow-hidden">
-        <div id="burger-inner" class="flex h-[20px] w-[25px] origin-center transform flex-col justify-between overflow-hidden transition-all duration-300">
+        <div
+          id="burger-inner"
+          class="flex h-[20px] w-[25px] origin-center transform flex-col justify-between overflow-hidden transition-all duration-300">
           <div class="h-[2px] w-7 origin-left transform rounded-2xl bg-primary-300 transition-all duration-300"></div>
           <div class="h-[2px] w-7 transform rounded-2xl bg-primary-300 transition-all delay-75 duration-300"></div>
           <div class="h-[2px] w-7 origin-left transform rounded-2xl bg-primary-300 transition-all delay-150 duration-300"></div>
