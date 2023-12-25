@@ -29,7 +29,7 @@
                         </svg>
                       </div>
                       <div class="active-spoiler-content max-h-0 overflow-hidden transition-all duration-300 will-change-auto">
-                        <div class="grid grid-cols-2 gap-4 p-5 pt-0 xl:grid-cols-4">
+                        <div id="pattenrs-container" class="grid grid-cols-2 gap-4 p-5 pt-0 xl:grid-cols-4">
                           <label class="relative flex cursor-pointer flex-col items-center rounded-md p-4 shadow-md">
                             <input type="radio" name="pattern-pick" value="Зіг-Заг" class="peer sr-only" checked />
                             <span
@@ -63,6 +63,8 @@
                         <div class="flex justify-center">
                           <button
                             type="button"
+                            id="load-more"
+                            data-item-type="patterns"
                             class="rounded-2xl bg-primary-200 px-6 py-3 font-medium text-white transition-colors duration-200 hover:bg-secondary-300 max-lg:mx-auto">
                             Показати ще
                           </button>

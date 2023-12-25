@@ -1,21 +1,7 @@
-import Lenis from "@studio-freight/lenis";
-import AOS from 'aos';
+import AOS from "aos";
 
 const toTopButton = document.getElementById("to-top-btn");
 const offset = 900;
-
-/**
- * Lenis smooth scroll
- */
-let lenis;
-lenis = new Lenis({
-  duration: 1.5,
-});
-function raf(time) {
-  lenis.raf(time);
-  requestAnimationFrame(raf);
-}
-requestAnimationFrame(raf);
 
 /**
  * Top top button appear
@@ -33,8 +19,9 @@ function scroll() {
  * Scroll to top
  */
 function toTop() {
-  lenis.scrollTo("top", {
-    duration: 2.5,
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
   });
 }
 
@@ -43,9 +30,8 @@ function toTop() {
  */
 AOS.init({
   duration: 600,
-  once: true
+  once: true,
 });
-
 
 toTopButton.addEventListener("click", toTop);
 window.addEventListener("scroll", scroll);
