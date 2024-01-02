@@ -4,7 +4,7 @@ import IMask from "imask";
     mask: "+{38}(000)000-00-00",
     lazy: true,
   };
-  const telInputs = document.querySelectorAll(".tel-mask");
+  const telInputs = document.querySelectorAll("input[type=tel]");
   telInputs.forEach(input => {
     if (input) {
       IMask(input, maskOptions);
